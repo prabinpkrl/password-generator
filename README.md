@@ -17,4 +17,4 @@ This project is a Password Generator App built with React. The app allows users 
 - CSS
 
 ## Getting Started
-click [here](#) to view.
+click [here](https://password-generator-prabin.vercel.app) to view.
