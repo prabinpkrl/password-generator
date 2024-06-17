@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  background: url('../public/pexels-ron-lach-10526880.jpg') no-repeat center center fixed;
   background-color: #242424;
   display: flex;
   justify-content: center;
@@ -11,7 +12,7 @@ body {
 }
 
 .wholebox {
-  background: #ebe2e2;
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
   padding: 30px;
   max-width: 450px;

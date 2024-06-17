@@ -39,6 +39,8 @@ function App() {
 
   return (
     <div className='wholebox'>
+    <h1>Random Password Generator</h1>
+    <p>Create strong and secure passwords to keep your account safe online.</p>
       <div className='passwordBox'>
         <label>Password:
           <input type='text'
