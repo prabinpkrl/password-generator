@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import './App.css';
+import PasswordStrengthIndicator from './components/passwordindicator';
 
 function App() {
   const [length, setLength] = useState(8);
@@ -43,22 +44,27 @@ function App() {
           <input type='text'
             name='password'
             value={password}
-            readOnly
+            
           />
         </label>
         <button onClick={copyPassword}>Copy</button>
       </div>
+      <div>
+        <PasswordStrengthIndicator password={password}/>
+      </div>
       <div className='controls'>
+        <label>Password Length:{length}</label>
         <input type='range'
+        id='password-length'
           name='lengthrange'
           min={6}
-          max={100}
+          max={25}
           value={length}
           onChange={(e) => setLength(Number(e.target.value))}
         />
-        <label>Length: {length}</label>
+        <p id='charactertext'>Character Used:</p>
         <div className='checkboxes'>
-          <label>-
+          <label>
             <input type='checkbox'
             className='checkbox'
               name='numberallowed'
@@ -76,6 +82,11 @@ function App() {
             />
             Symbols
           </label>
+        </div>
+        <div className='generateBtn'>
+          <button 
+          onClick={generatePassword}
+          >Generate password</button>
         </div>
       </div>
     </div>

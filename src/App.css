@@ -6,15 +6,18 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .wholebox {
-  background: #a59f9f;
+  background: #ebe2e2;
   border-radius: 10px;
   padding: 30px;
   max-width: 450px;
   width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .passwordBox {
@@ -28,7 +31,7 @@ body {
 }
 
 .passwordBox input[type="text"] {
-  width: calc(100% - 70px);
+  width: calc(100% - 80px);
   padding: 12px;
   font-size: 20px;
   margin-right: 10px;
@@ -45,6 +48,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 
 .passwordBox button:hover {
@@ -59,17 +63,37 @@ body {
   display: block;
   margin-bottom: 10px;
   font-size: 20px;
+  font-weight: bold;
+}
+
+.controls #password-length{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.controls input[type="range"]{
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  padding: 0;
+  margin: 0 10px;
 }
 
 .controls input[type="range"] {
   width: 100%;
   margin-bottom: 20px;
 }
+.controls p{
+  font-size: 20px;
+}
 
 .checkboxes {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
+
 input.checkbox{
   width: 30px;
   height: 30px;
@@ -79,8 +103,81 @@ input.checkbox{
   display: flex;
   align-items: center;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .checkboxes input {
   margin-right: 10px;
+}
+
+.generateBtn button{
+  border: none;
+  padding: 15px;
+  font-size: large;
+  border-radius: 10px;
+  background-color: rgb(5, 173, 5);
+}
+
+.generateBtn button:hover{
+  background-color: rgba(5, 184, 5, 0.836);
+}
+
+@media (max-width: 768px) {
+  .wholebox {
+    padding: 20px;
+  }
+
+  .passwordBox input[type="text"] {
+    width: calc(100% - 70px);
+    font-size: 16px;
+  }
+
+  .passwordBox button {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .controls label,
+  .controls p {
+    font-size: 16px;
+  }
+
+  .controls input[type="range"] {
+    margin: 0;
+  }
+
+  .checkboxes label {
+    font-size: 16px;
+  }
+
+  .generateBtn button {
+    padding: 10px;
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .passwordBox input[type="text"] {
+    width: calc(100% - 60px);
+    font-size: 14px;
+  }
+
+  .passwordBox button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .controls label,
+  .controls p {
+    font-size: 14px;
+  }
+
+  .checkboxes label {
+    font-size: 14px;
+  }
+
+  .generateBtn button {
+    padding: 8px;
+    font-size: small;
+  }
 }
